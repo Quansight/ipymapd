@@ -5,7 +5,7 @@ MapD is cool technology.  This tool bundles MapD technologies into a user friend
 
 
 ```python
-    %reload_ext ipymapd
+%reload_ext ipymapd
 ```
 
 ## Connecting to a database
@@ -20,7 +20,7 @@ Connect to a database connection.
 
 
 ```python
-    %mapd connect metis
+%mapd connect metis
 ```
 
     <ibis.mapd.client.MapDClient object at 0x113068f60> contains the tables: ['flights_donotmodify', 'contributions_donotmodify', 'tweets_nov_feb', 'zipcodes_orig', 'zipcodes', 'demo_vote_clean']
@@ -45,8 +45,8 @@ Connect to a database using arguments
 
 
 ```python
-    %%mapd 
-    SELECT goog_x as x, goog_y as y, tweets_nov_feb.rowid FROM tweets_nov_feb limit 10
+%%mapd 
+SELECT goog_x as x, goog_y as y, tweets_nov_feb.rowid FROM tweets_nov_feb limit 10
 ```
 
 
@@ -146,39 +146,36 @@ Connect to a database using arguments
 
 The `mapd` magic may accept yaml in the body.  When `yaml` is used we return a visualization.
 
-
-```python
-    %%mapd
-    width: 384
-    height: 564
-    config: {ticks: false}
-    data:
-      - name: 'tweets'
-        sql: 'SELECT goog_x as x, goog_y as y, tweets_nov_feb.rowid FROM tweets_nov_feb' 
-    scales:
-      - name: 'x'
-        type: 'linear'
-        domain: [3650484.1235206556, 7413325.514451755]
-        range: 'width'
-      - name: 'y'
-        type: 'linear'
-        domain: [5778161.9183506705, 10471808.487466192]
-        range: 'height'
-    marks:
-      - type: 'points'
-        from: {data: 'tweets'}
-        properties:
-          x: {scale: 'x', field: 'x'}
-          y: {scale: 'y', field: 'y'}
-          fillColor: 'green'
-          size: {value: 1}
-```
+%%mapd
+width: 384
+height: 564
+config: {ticks: false}
+data:
+  - name: 'tweets'
+    sql: 'SELECT goog_x as x, goog_y as y, tweets_nov_feb.rowid FROM tweets_nov_feb' 
+scales:
+  - name: 'x'
+    type: 'linear'
+    domain: [3650484.1235206556, 7413325.514451755]
+    range: 'width'
+  - name: 'y'
+    type: 'linear'
+    domain: [5778161.9183506705, 10471808.487466192]
+    range: 'height'
+marks:
+  - type: 'points'
+    from: {data: 'tweets'}
+    properties:
+      x: {scale: 'x', field: 'x'}
+      y: {scale: 'y', field: 'y'}
+      fillColor: 'green'
+      size: {value: 1}
 
 Disconnect the last database that was created
 
 
 ```python
-    %mapd disconnect 
+%mapd disconnect 
 ```
 
 ## Completion
@@ -195,5 +192,9 @@ Disconnect the last database that was created
 * A user will experiment with a query before visualizing it.
 * Typing out the connection information in _unfun_
 
+
+```python
 if __name__ == '__main__':
     !jupyter nbconvert --to markdown readme.ipynb
+    !jupyter nbconvert --to python ipymapd/*.ipynb
+```
