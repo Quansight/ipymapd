@@ -8,10 +8,6 @@ MapD is cool technology.  This tool bundles MapD technologies into a user friend
     %reload_ext ipymapd
 ```
 
-    c:\users\deathbeds\ibis\ibis\sql\postgres\compiler.py:223: UserWarning: locale specific date formats (%c, %x, %X) are not yet implemented for Windows
-      'for %s' % platform.system()
-    
-
 ## Connecting to a database
 
 * List known connections
@@ -27,8 +23,8 @@ Connect to a database connection.
     %mapd connect metis
 ```
 
-    <ibis.mapd.client.MapDClient object at 0x00000236D74E1940> contains the tables: ['flights_donotmodify', 'contributions_donotmodify', 'tweets_nov_feb', 'zipcodes_orig', 'zipcodes', 'demo_vote_clean']
-    
+    <ibis.mapd.client.MapDClient object at 0x113068f60> contains the tables: ['flights_donotmodify', 'contributions_donotmodify', 'tweets_nov_feb', 'zipcodes_orig', 'zipcodes', 'demo_vote_clean']
+
 
 List the tables in the connection.  This could return a sick widget to explore the data.
 
@@ -82,63 +78,63 @@ Connect to a database using arguments
   <tbody>
     <tr>
       <th>0</th>
-      <td>-6.494699e+06</td>
-      <td>-4122946.500</td>
-      <td>11232</td>
+      <td>-13563874.0</td>
+      <td>4.384050e+06</td>
+      <td>4448</td>
     </tr>
     <tr>
       <th>1</th>
-      <td>-4.279343e+05</td>
-      <td>4904413.000</td>
-      <td>11233</td>
+      <td>-4913196.5</td>
+      <td>-2.574509e+06</td>
+      <td>10016</td>
     </tr>
     <tr>
       <th>2</th>
-      <td>-9.807124e+06</td>
-      <td>5091781.500</td>
-      <td>11234</td>
+      <td>-7009535.0</td>
+      <td>-4.230903e+06</td>
+      <td>4608</td>
     </tr>
     <tr>
       <th>3</th>
-      <td>-1.316743e+07</td>
-      <td>4024572.500</td>
-      <td>11235</td>
+      <td>11907241.0</td>
+      <td>-6.886003e+05</td>
+      <td>4576</td>
     </tr>
     <tr>
       <th>4</th>
-      <td>-5.571405e+06</td>
-      <td>-3475819.500</td>
-      <td>11248</td>
+      <td>-7630287.0</td>
+      <td>-3.707356e+06</td>
+      <td>9408</td>
     </tr>
     <tr>
       <th>5</th>
-      <td>-4.337398e+06</td>
-      <td>-1370884.875</td>
-      <td>11249</td>
+      <td>-8239380.0</td>
+      <td>4.968139e+06</td>
+      <td>9888</td>
     </tr>
     <tr>
       <th>6</th>
-      <td>4.758664e+06</td>
-      <td>2412860.000</td>
-      <td>11250</td>
+      <td>-5436762.0</td>
+      <td>-3.040998e+06</td>
+      <td>4416</td>
     </tr>
     <tr>
       <th>7</th>
-      <td>-1.024692e+07</td>
-      <td>1706442.000</td>
-      <td>11251</td>
+      <td>13476805.0</td>
+      <td>1.632640e+06</td>
+      <td>4960</td>
     </tr>
     <tr>
       <th>8</th>
-      <td>-1.080943e+07</td>
-      <td>3844545.750</td>
-      <td>5216</td>
+      <td>-8241296.5</td>
+      <td>4.973656e+06</td>
+      <td>4449</td>
     </tr>
     <tr>
       <th>9</th>
-      <td>-6.514333e+06</td>
-      <td>-4092641.750</td>
-      <td>11236</td>
+      <td>-7277123.5</td>
+      <td>-3.884417e+06</td>
+      <td>9984</td>
     </tr>
   </tbody>
 </table>
@@ -178,13 +174,6 @@ The `mapd` magic may accept yaml in the body.  When `yaml` is used we return a v
           size: {value: 1}
 ```
 
-
-
-
-    <mapd_renderer.MapDBackendRenderer at 0x236d6129278>
-
-
-
 Disconnect the last database that was created
 
 
@@ -206,8 +195,5 @@ Disconnect the last database that was created
 * A user will experiment with a query before visualizing it.
 * Typing out the connection information in _unfun_
 
-
-```python
 if __name__ == '__main__':
     !jupyter nbconvert --to markdown readme.ipynb
-```
