@@ -198,3 +198,15 @@ if __name__ == '__main__':
     !jupyter nbconvert --to markdown readme.ipynb
     !jupyter nbconvert --to python ipymapd/*.ipynb
 ```
+
+    [NbConvertApp] Converting notebook readme.ipynb to markdown
+    [NbConvertApp] Writing 3722 bytes to readme.md
+    [NbConvertApp] Converting notebook ipymapd/arguments.ipynb to python
+    [NbConvertApp] Writing 1843 bytes to ipymapd/arguments.py
+    [NbConvertApp] Converting notebook ipymapd/connection.ipynb to python
+    [NbConvertApp] Writing 1487 bytes to ipymapd/connection.py
+    [NbConvertApp] Converting notebook ipymapd/isql.ipynb to python
+    [NbConvertApp] Writing 799 bytes to ipymapd/isql.py
+    [NbConvertApp] Converting notebook ipymapd/magics.ipynb to python
+    [NbConvertApp] Writing 3461 bytes to ipymapd/magics.py
+
